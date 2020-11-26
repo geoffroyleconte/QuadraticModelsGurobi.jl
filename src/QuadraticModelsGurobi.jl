@@ -79,6 +79,8 @@ function gurobi(QM; method=2, kwargs...)
             GRBsetintparam(env, "Crossover", v) # 0 = no crossover
         elseif k==:display
             GRBsetintparam(env, "OutputFlag", v) # 0 = no display
+        elseif k==:threads
+            GRBsetintparam(env, "Threads", v)
         end
     end
 
