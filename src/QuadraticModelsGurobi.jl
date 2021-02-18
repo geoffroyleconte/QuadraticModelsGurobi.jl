@@ -81,7 +81,6 @@ function gurobi(QM; method=2, kwargs...)
             GRBsetintparam(env, "OutputFlag", v) # 0 = no display
         elseif k==:objscale
             GRBsetdblparam(env, "ObjScale", v)
-            println("objscale")
         end
     end
 
